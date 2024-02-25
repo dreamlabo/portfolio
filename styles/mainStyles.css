@@ -1,0 +1,16 @@
+*, 
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --font-family-heading: "Lato", sans-serif;
+    --font-family-sub-text: "Crimson Text", serif;
+    --clr-main: #CD7E2A;
+    --clr-second: #E8D3BD;
+    --clr-third: #7E2ACD;
+    --clr-bkgd: #151413;
+}
