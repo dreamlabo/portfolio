@@ -8,13 +8,14 @@
                                            
                                             var(--clr-bkgd);
     -webkit-backdrop-filter: blur( 20px );
-    backdrop-filter: blur( 20px ),
+    backdrop-filter: blur( 20px );
+    z-index: 10;
 }
 
 .header-container {
     display: flex;
     width: calc(100% - var(--page-margin-full));
-    max-width: 1500px;
+    max-width: var(--max-screen-width);
     margin: 0 auto;
     padding: 0 0;
     justify-content: space-between;
