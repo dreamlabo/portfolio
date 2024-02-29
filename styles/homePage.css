@@ -23,7 +23,7 @@
 
 .watermark-text--mobile {
     --watermark-font-size--mobile: 50px;
-    opacity: .05;
+    opacity: .1;
     color: var(--clr-second);
     font-size: var(--watermark-font-size--mobile);
     font-weight: 600;
@@ -71,13 +71,6 @@
     border-left: 3px solid var(--clr-bkgd);
 }
 
-.inner-container-two {
-/* 
-    display: flex;
-    justify-content: center;
-    flex-direction: column; */
-}
-
 .about-grid {
     padding: 3rem 0;
     display: grid;
@@ -94,11 +87,10 @@
     align-items: center;
     color: rgba(126, 42, 205, 0.6);
     color: var(--clr-main);
-    /* border: 1px solid white; */
 }
 
 .about-icons--mobile {
-    margin-top: 1em;
+    margin-top: 1.2em;
     display: none;
     justify-content: flex-end;
     color: var(--clr-third);
@@ -116,7 +108,6 @@
 
 .about-text-container {
     display: flex;
-    /* max-width: 600px; */
     flex-direction: column;
     justify-content: space-between;
     gap: 1rem;
@@ -128,29 +119,22 @@
     font-size: 1.25rem;
 }
 
-.about-text:not(:first-child) {
-    /* margin-top: 3rem; */
-
-}
-
 .about-image {
     padding-left: 2rem;
     display: block;
     width: 100%;
     height: auto;
-    /* border-radius: 5px; */
     filter: sepia(80%)
 }
 
 .btn--read-more {
-    /* margin-top: 2rem; */
     padding: .5em 1em;
     border-radius: 3px;
     color: var(--clr-bkgd);
-    font-size: 16px;
+    font-size: 1rem;
     background: var(--clr-main);
     width: max-content;
-    align-self:end;
+    align-self: end;
 }
 
 .btn--read-more span {
@@ -187,7 +171,6 @@
         font-size: 1rem;
     }
 }
-
 
 .social-icon--mobile:not(:first-child) {
     margin-left: 2em;
@@ -237,8 +220,7 @@
 
     .btn--read-more {
             margin-top: 1em;
-            font-size: 16px;
-            background: var(--clr-main);
+            font-size: 1rem;
     }
 }
 
@@ -246,9 +228,10 @@
     .social-icon--mobile:not(:first-child) {
         margin-left: 1.5em;
     }
+
     .btn--read-more {
-        font-size: 0.75rem;
-}
+        font-size: 0.9rem;
+    }
 }
 
 @media screen and (max-width: 300px) { 
@@ -260,10 +243,4 @@
         margin-right: 0.1em;
     }
 }
-
-
-
-/* .social-icon--mobile {
-    padding: 1em;
-} */
 
