@@ -84,7 +84,7 @@
 .about-grid {
     padding: 3rem 0;
     display: grid;
-    grid-template-columns: 80px minmax(200px, 1fr) minmax(200px, 1fr);
+    grid-template-columns: var(--icon-grid-column-width) minmax(200px, 1fr) minmax(200px, 1fr);
     column-gap: 20px;
 }
 
@@ -306,4 +306,67 @@
         display: grid;
         grid-template-columns: 1fr;
     }
+}
+
+
+/* Connect Section */
+.connect-grid {
+        padding: 3rem 0;
+        display: grid;
+        grid-template-columns: var(--icon-grid-column-width) minmax(200px, 1fr) minmax(200px, 1fr);
+        column-gap: 1.25rem;
+}
+
+.contact-form-container {
+    border: 1px solid red;
+    padding: 2rem;
+    border-radius: 5px;
+
+}
+
+.contact-form-container h3 {
+    color: var(--clr-main);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.contact-form-container p {
+    margin-top: 0.5em;
+    color: var(--clr-second);
+    font-family: var(--font-family-sub-text);
+}
+
+.contact-form-header {
+    color: var(--clr-main);
+}
+
+.form-fields {
+    margin-top: 1em;
+
+
+    color: var(--clr-second);
+
+}
+
+.form-fields > * {
+    display: block;
+    width: 100%;
+}
+
+.btn-send {
+    margin-top: 2em;
+    padding: .5em 2em;
+    border-radius: 3px;
+    border: 2px solid var(--clr-main);
+    color: var(--clr-bkgd);
+    font-size: 1rem;
+    background: var(--clr-main);
+    /* border: none; */
+    float: right;
+}
+
+.btn-send:hover {
+    border: 2px solid var(--clr-third);
+    background: var(--clr-bkgd);
+    color: var(--clr-third);
 }

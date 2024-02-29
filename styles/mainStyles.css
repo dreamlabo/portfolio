@@ -27,6 +27,8 @@
     --page-margin-four: 4rem;
     --page-margin-two: 2rem;
     --page-margin-one: 1rem;
+
+    --icon-grid-column-width: 80px;
 }
 
 li {
