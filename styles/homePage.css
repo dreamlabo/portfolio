@@ -1,3 +1,11 @@
+.about-section-wrapper {
+    margin-top: 6rem;
+}
+
+.section-margin-top-xl {
+    padding-top: 3rem;
+}
+
 /* About Section */
 .heading-grid--full {
     display: grid;
@@ -34,7 +42,8 @@
     display: none;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 .mobile-section-header {
@@ -60,6 +69,7 @@
     border: 1px solid var(--clr-main);
     border-radius: 3px;
     z-index: -1;
+    opacity: 0.3;
 }
 
 .heading-border::after {
@@ -181,6 +191,13 @@
 }
 
 @media screen and (max-width: 700px) {
+    .section-margin-top-xl {
+        padding-top: 0rem;
+    }
+
+    .about-section-wrapper {
+        margin-top: 4rem;
+    }
 
     .heading-grid--full {
         display: none;
@@ -188,6 +205,7 @@
 
     .mobile-header-container {
         display: flex;
+        
     }
 
     .mobile-section-header {
@@ -197,7 +215,6 @@
     .watermark-text--mobile {
         font-size: clamp(1.5rem, 5vw + 10px, 50px);
     }
-
 
     .about-grid {
         padding: 2rem 0;
@@ -235,6 +252,9 @@
 }
 
 @media screen and (max-width: 300px) { 
+    .watermark-text--mobile {
+        display: none;
+    }
     .social-icon--mobile:not(:first-child) {
         margin-left: 1em;
     }
@@ -244,3 +264,46 @@
     }
 }
 
+/* Works Section */
+.works-grid {
+    padding: 4rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+    gap: 2rem;
+}
+
+.work-card {
+    border-radius: 5px;
+    padding: 1rem;
+    background: rgba(232, 211, 189, 0.1);
+    filter: drop-shadow(4px 4px 10px rgba(0,0,0, 0.5));
+}
+
+.works-grid img {
+    display: inline-block;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    filter: drop-shadow(4px 4px 10px rgba(0,0,0, 0.3));
+}
+
+.work-flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    color: var(--clr-main);
+    font-family: var(--font-family-sub-text);
+
+}
+
+@media screen and (max-width: 800px) {
+    .works-grid {
+        padding: 2rem 0;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
