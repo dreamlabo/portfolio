@@ -216,7 +216,6 @@
         font-size: clamp(1.5rem, 5vw + 10px, 50px);
     }
 
-
     .about-grid {
         padding: 2rem 0;
         grid-template-columns: 1fr;
@@ -253,7 +252,6 @@
 }
 
 @media screen and (max-width: 300px) { 
-
     .watermark-text--mobile {
         display: none;
     }
@@ -275,24 +273,20 @@
 }
 
 .work-card {
-    /* border: 1px solid white; */
     border-radius: 5px;
     padding: 1rem;
     background: rgba(232, 211, 189, 0.1);
     filter: drop-shadow(4px 4px 10px rgba(0,0,0, 0.5));
-    
 }
 
 .works-grid img {
     display: inline-block;
-    /* border: 1px solid red; */
     object-fit: cover;
     aspect-ratio: 16/9;
     width: 100%;
     height: auto;
     border-radius: 5px;
     filter: drop-shadow(4px 4px 10px rgba(0,0,0, 0.3));
-
 }
 
 .work-flex-container {
@@ -306,18 +300,10 @@
 
 }
 
-.work-flex-container h3 {
-    /* margin-top: 1rem; */
-}
-
 @media screen and (max-width: 800px) {
     .works-grid {
         padding: 2rem 0;
         display: grid;
         grid-template-columns: 1fr;
- 
     }
-    
-    
 }
-
