@@ -51,8 +51,8 @@ body {
 }
 
 .section-container {
-    width: calc(100% - 0rem);
-    max-width: var(--max-screen-width);
+    width: 100%;
+    /* max-width: var(--max-screen-width); */
     margin: 0 auto;
 }
 
@@ -72,8 +72,9 @@ body {
 /* Hero Section */
 .page-wrapper {
     width: calc(100% - var(--page-margin-full));
-    max-width: var(--max-width);
+    max-width: var(--max-screen-width);
     margin: 0 auto;
+    /* border: 1px solid red; */
 }
 
 @media screen and  (max-width: 960px) {
