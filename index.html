@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./styles/header/header.css">
     <link rel="stylesheet" href="./styles/homePage.css">
     <script src="scripts/homePageScripts/homePage.js" defer></script>
+    <script src="./scripts/homePageScripts/contactForm.js" defer></script>
     <title>Todd Labo</title>
 </head>
 <body>
@@ -217,45 +218,56 @@
                             </a>
                         </li>
                     </ul>
-                    <form class="contact-form-container">
+                    <form id="contact-form" class="contact-form-container">
                         <h3 class="contact-form-header">Let's Build Something Together</h3>
-                        <p>
+                        <p class="contact-form-sub-header">
                             Whether you have a project in mind, a question to ask, or just want to say hello, 
                             I'm here and ready to connect.
                         </p>
-                        <p>
+                        <p class="contact-form-sub-header">
                             Feel free to drop me a message below, 
                             and let's get started!
                         </p>
                         <div class="form-fields">
-                            <input id="contact-input-hidden"type="text" hidden>
+                            <input id="contact-input-honeypot"type="text" hidden>
                             <div class="contact-input-container">
                                 <input id="your-name" 
                                         class="contact-input" 
                                         type="text" 
+                                        name="name"
                                         placeholder="Your Name"
-                                        required>
+                                        >
                                 <label class="contact-label" for="your-name">Your Name</label>
+                                
                             </div>
+                            <p class="contact-error-message">Name is required.</p>
                             <div class="contact-input-container">
                                 <input id="email-address" 
                                         class="contact-input" 
                                         type="email" 
-                                        placeholder="Email Address"
-                                        required>
+                                        name="email"
+                                        placeholder="Email Address">
                                 <label class="contact-label" for="email-address">Your Email</label>
                             </div>
+                            <p class="contact-error-message">A valid email is required.</p>
                             <div class="text-area-container"> 
                                 <textarea id="contact-message"
                                             class="contact-textarea"
                                             aria-label="Email message"
                                             name="contact-message" 
                                             placeholder="Message"
-                                            required>
+                                            >
                                 </textarea>
                                 <label class="text-area-label" for="contact-message">Message</label> 
                             </div>
-                            <button type="submit" class="btn-send">Send</button>
+                            <p class="contact-error-message">Message is required.</p>
+                            <div class="contact-form-btm-container">
+                                <div id="contact-form-submit-message">
+                                    <p class="contact-success-message">Thanks for reaching out.</p>
+                                    <p class="contact-success-message">I'll get back to you shortly.</p>
+                                </div>
+                                <button type="submit" class="btn-send">Send</button>
+                            </div>
                         </div>
                     </form>
                     <div></div>

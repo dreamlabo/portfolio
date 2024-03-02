@@ -370,7 +370,7 @@
     text-wrap: balance;
 }
 
-.contact-form-container p {
+.contact-form-sub-header {
     margin-top: 0.7em;
     color: var(--clr-second);
     font-size: 1rem;
@@ -384,7 +384,7 @@
 
 .contact-input-container {
     position: relative;
-    margin-top: 1.5em;
+    margin-top: 1em;
 }
 
 .contact-input {
@@ -395,9 +395,9 @@
     border-bottom: 1px solid var(--clr-main); 
     padding: .5em  .2em .2em 0em;
     color: var(--clr-main);
+    font-family: var(--font-family-heading);
+    font-size: 1rem;
     transition: all 250ms;
-    font-family: var(--font-family-sub-text);
-    font-size: 1.2rem;
 }
 
 .contact-input:focus {
@@ -427,7 +427,7 @@
 
 .btn-send {
     background: var(--clr-main);
-    margin-top: 2em;
+    /* margin-top: 2em; */
     padding: .5em 2em;
     border-radius: 3px;
     border: 2px solid var(--clr-main);
@@ -445,21 +445,22 @@
 
 .text-area-container {
     position: relative;
-    margin-top: 2.3em;
+    margin-top: 1.5em;
 }
 
 .contact-textarea {
     width: 100%;
-    background: transparent; background: transparent;
+    padding-right: 1em;
+    background: transparent;
     border: none; 
     border-bottom: 1px solid var(--clr-main); 
-    resize: vertical !important;
+    resize: vertical;
     height: 1.5em;
     min-height: 1.2em;
     max-height: 5em;
     color: var(--clr-main);
-    font-family: var(--font-family-sub-text);
-    font-size: 1.2rem;
+    font-family: var(--font-family-heading);
+    font-size: 1rem;
     transition: all 250ms;
 }
 
@@ -478,11 +479,47 @@
     top: 0;
     pointer-events: none;
     transform-origin: left center;
+    transition: all 250ms;
 }
 
 .contact-textarea:focus + .text-area-label,
 .contact-textarea:not(:placeholder-shown) + .text-area-label {
     transform: translateY(-110%) scale(0.70);
+}
+
+.contact-btm-container {
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.contact-success-message, 
+.contact-error-message {
+    margin-top: 3px;
+    visibility: hidden;
+    font-size: 12px;
+}
+
+
+.contact-success-message.success-text-visible,
+.contact-error-message.contact-error-visible {
+    visibility: visible;
+}
+
+
+.contact-error-message {
+    color: var(--clr-error-text);
+}
+
+.contact-form-btm-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-success-message {
+    color: var(--clr-third);
+    font-size: 16px;
 }
 
 @media screen and (max-width: 800px) {
@@ -512,16 +549,24 @@
     }
 
     .contact-form-header {
-       
         font-size: 2rem;
         font-size: clamp(1.5rem, 5vw + 3px, 2rem);
-      
     }
 }
 
 @media screen and (max-width: 500px) {
     .section-padding {
         padding: 3rem 0 3rem 0;
+    }
+
+
+    .contact-textarea:focus {
+        height: 4em;
+    }
+
+    .contact-textarea:focus,
+    .contact-textarea:not(:placeholder-shown) {
+        height: 4em;
     }
 }
 
