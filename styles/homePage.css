@@ -490,22 +490,27 @@
 .contact-btm-container {
     display: flex;
     justify-content: space-between;
-   
 }
-
-.contact-success-message, 
+ 
 .contact-error-message {
     margin-top: 3px;
     visibility: hidden;
     font-size: 12px;
 }
 
+.contact-success-message {
+    color: var(--clr-third);
+    opacity: 0;
+    transition: all 500ms ease-in;
+}
 
-.contact-success-message.success-text-visible,
+.contact-success-message.success-text-visible {
+    opacity: 1;
+}
+
 .contact-error-message.contact-error-visible {
     visibility: visible;
 }
-
 
 .contact-error-message {
     color: var(--clr-error-text);
@@ -517,15 +522,11 @@
     align-items: center;
 }
 
-.contact-success-message {
-    color: var(--clr-third);
-    font-size: 16px;
-}
-
 @media screen and (max-width: 800px) {
     .connect-grid {
         grid-template-columns: var(--icon-grid-column-width) 1fr;
     }
+
     .contact-form-container {
         margin-right: 0rem;
     }
@@ -539,6 +540,7 @@
     .connect-padding {
         padding: 2rem 0
     }
+
     .connect-grid {
         padding: 2rem 0;
         grid-template-columns: 1fr;
@@ -558,7 +560,6 @@
     .section-padding {
         padding: 3rem 0 3rem 0;
     }
-
 
     .contact-textarea:focus {
         height: 4em;
