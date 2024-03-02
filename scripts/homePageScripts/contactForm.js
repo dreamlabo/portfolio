@@ -1,7 +1,7 @@
 const contactForm = document.getElementById('contact-form');
 const nameInput = document.getElementById("your-name");
 const emailInput = document.getElementById("email-address");
-const tellUsInput = document.getElementById("contact-message");
+const contactMessage = document.getElementById("contact-message");
 const errorMessageFields = document.getElementsByClassName("contact-error-message");
 const formHoneypot = document.getElementById("contact-input-honeypot");
 const successMessage = document.getElementsByClassName("contact-success-message");
@@ -44,7 +44,7 @@ function handleContactFormSubmit(e) {
     }
 
     // check if tell us is empty
-    if(tellUsInput.value.trim() === "") {
+    if(contactMessage.value.trim() === "") {
         isErrorFree = false;
         errorMessageFields[2].classList.add("contact-error-visible");
         if(!focusElement) {
@@ -56,10 +56,32 @@ function handleContactFormSubmit(e) {
         focusElement.focus();
     }
     else {
+        const templateParams = {
+            name: nameInput.value.trim(),
+            email: emailInput.value.trim(),
+            text: contactMessage.value.trim(),
+        }
 
-        successMessage[0].classList.add("success-text-visible")
-        successMessage[1].classList.add("success-text-visible")
+        emailjs.send('service_xsyyfic', 'template_i8ccxoy', templateParams).then(
+            (response) => {
+                console.log(response)
+                successfullySentContactInfo();
+            },
+            (error) => {
+                console.log(error)
+                // errorSendingContactInfo();
+            },
+          );
     }
+}
 
-
+function successfullySentContactInfo() {
+    successMessage[0].classList.add("success-text-visible");
+    successMessage[1].classList.add("success-text-visible");
+    contactForm.reset();
+    contactMessage.value="";
+    setTimeout(() => {
+        successMessage[0].classList.remove("success-text-visible");
+        successMessage[1].classList.remove("success-text-visible");
+    }, 5000)
 }
