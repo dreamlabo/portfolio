@@ -197,9 +197,6 @@
 }
 
 @media screen and (max-width: 700px) {
-
-
-
     .section-margin-top-xl {
         padding-top: 0rem;
     }
@@ -214,7 +211,6 @@
 
     .mobile-header-container {
         display: flex;
-        
     }
 
     .mobile-section-header {
@@ -286,6 +282,7 @@
 }
 
 .work-card {
+    display: block;
     border-radius: 5px;
     padding: 1rem;
     background: rgba(232, 211, 189, 0.1);
@@ -299,7 +296,7 @@
     width: 100%;
     height: auto;
     border-radius: 5px;
-    filter: drop-shadow(4px 4px 10px rgba(0,0,0, 0.3));
+    filter: drop-shadow(4px 4px 10px rgba(0,0,0, 0.1));
 }
 
 .work-flex-container {
@@ -569,55 +566,4 @@
     .contact-textarea:not(:placeholder-shown) {
         height: 4em;
     }
-}
-
-.footer {
-    text-align: center;
-    padding-top: 2rem;
-}
-
-.footer p:first-of-type {
-    margin-top: 0.2em;
-    margin-bottom: 1em;
-    color: var(--clr-main);
-}
-
-.copyright {
-    padding-bottom: 1rem;
-    color: var(--clr-main);
-}
-
-.footer-logo-inner-container {
-    display: inline-block;
-    color: var(--clr-main);
-}
-
-.footer-logo-inner-container div:nth-child(1) {
-    font-size: 34px;
-    line-height: 1;
-}
-
-.footer-logo-inner-container div:nth-child(2) {
-    font-size: 10.3px;
-    position: relative;
-}
-
-.footer-logo-inner-container div:nth-child(2)::before {
-    content: "";
-    position: absolute;
-    left: -15px;
-    top: 50%;
-    background: var(--clr-main);
-    height: 1px;
-    width: 12px;
-}
-
-.footer-logo-inner-container div:nth-child(2)::after {
-    content: "";
-    position: absolute;
-    right: -15px;
-    top: 50%;
-    background: var(--clr-main);
-    height: 1px;
-    width: 12px;
 }
