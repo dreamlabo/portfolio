@@ -6,6 +6,11 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--scroll-padding, 70px);
+}
+
 .case-study-main-header {
     max-width: 45ch;
     margin-bottom: .3rem;
@@ -572,4 +577,16 @@
 
 .padding-bottom-med {
     padding-bottom: 2rem;
+}
+
+.footer-icons--mobile {
+    margin-top: 0em;
+    margin-bottom: 1.2em;
+    display: flex;
+    justify-content: center;
+    color: var(--clr-third);
+}
+
+.social-icon--mobile:not(:first-child) {
+    margin-left: 2em;
 }

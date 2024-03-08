@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c43c1a8058.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/mainStyles.css">
     <link rel="stylesheet" href="./styles/header/header.css">
     <link rel="stylesheet" href="./styles/caseStudies/case-studies-main-styles.css">
     <link rel="stylesheet" href="./styles/caseStudies/cars-case-study.css">
+    <script src="./scripts/carsCaseStudy/carsCaseStudyScripts.js" defer></script>
     <title>CARS Case Study</title>
 </head>
 <body>
-    <header class="header-wrapper">
+    <header id="header-wrapper" class="header-wrapper">
         <div class="header-container">
-            <a href="/index.html" class="header-logo">
+            <a href="./index.html" class="header-logo">
                 <div class="header-logo-inner-container">
                     <div>LABO</div>
                     <div>CREATIVE REALMS</div>
@@ -20,7 +25,7 @@
             </a>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="/index.html">HOME</a></li>
+                    <li><a href="./index.html">HOME</a></li>
                     <!-- <li ><a href="">WORKS</a></li>
                     <li href=""><a href="">ABOUT</a></li> -->
                     <!-- <li href=""><a href="">CONTACT</a></li> -->
@@ -48,14 +53,14 @@
             <section class="section-container">
                 <div class="case-study-grid--actual">
                     <nav class="study-navigation-wrapper">
-                        <ul class="study-navigation-container" >
+                        <ul id="navigation-links" class="study-navigation-container" >
                             <li><a class="active" href="#background">Background</a></li>
-                            <li><a  href="#problem">Problem</a></li>
+                            <li><a href="#problem">Problem</a></li>
                             <li><a href="#goals">Goals</a></li>
-                            <li><a href="">Constraints</a></li>
-                            <li><a href="">Key Screens</a></li>
-                            <li><a href="">Before/After</a></li>
-                            <li><a href="">Future Improvements</a></li>
+                            <li><a href="#constraints">Constraints</a></li>
+                            <li><a href="#keyScreens">Key Screens</a></li>
+                            <li><a href="#before/after">Before/After</a></li>
+                            <li><a href="#futureImprovements">Future Improvements</a></li>
                         </ul>
                     </nav>
                     <div class="class-study-main-container">
@@ -163,7 +168,7 @@
                             </div>  
                         </div>
                         <div class="ux-sub-section">
-                            <h2 id="problem" class="ux-study-header">Constraints</h2>
+                            <h2 id="constraints" class="ux-study-header">Constraints</h2>
                             <div class="ux-study--indent-one">
                                 <h3 class="ux-study-sub-header">Hosting Limitations</h3>
                                 <p class="ux-study-text ux-study--indent-two">
@@ -180,7 +185,7 @@
                             </div>
                         </div>
                         <div class="ux-sub-section">
-                            <h2 id="problem" class="ux-study-header">Key Screens</h2>
+                            <h2 id="keyScreens" class="ux-study-header">Key Screens</h2>
                             <div class="ux-study--indent-one">
                                 <p class="ux-study-text">
                                     From the Home Page featuring prominent meeting details 
@@ -231,7 +236,7 @@
                             </div>
                         </div>
                         <div class="ux-sub-section  padding-bottom-med">
-                            <h2 id="problem" class="ux-study-header">Before/After</h2>
+                            <h2 id="before/after" class="ux-study-header">Before/After</h2>
                             <div class="ux-study--indent-one">
                                 <p class="ux-study-text">
                                     From the Home Page featuring prominent meeting details 
@@ -307,7 +312,7 @@
                             </div>
                         </div>
                         <div class="ux-sub-section">
-                            <h2 id="problem" class="ux-study-header">Future Improvements</h2>
+                            <h2 id="futureImprovements" class="ux-study-header">Future Improvements</h2>
                             <div class="ux-study--indent-one">
                                 <p class="ux-study-text">
                                     While the core functionality has been implemented, there is room for 
@@ -408,7 +413,7 @@
                     <a href="https://www.linkedin.com/in/toddlabo/" target="_blank">
                         <i class="fa-brands fa-github fa-xl"></i>
                     </a>
-                </li>frow-gap: 2rem;
+                </li>
                 <li class="social-icon--mobile">
                     <a href="https://www.linkedin.com/in/toddlabo/" target="_blank">
                         <i class="fa-brands fa-instagram fa-xl"></i>
