@@ -264,6 +264,7 @@
     .watermark-text--mobile {
         display: none;
     }
+    
     .social-icon--mobile:not(:first-child) {
         margin-left: 1em;
     }
