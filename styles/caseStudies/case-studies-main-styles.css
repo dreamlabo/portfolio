@@ -494,6 +494,7 @@ html {
 
 .ux-future-improvements-screens-grid {
     row-gap: 1rem;
+    padding-top: 0.2rem;
 }
 
 .ux-future-improvements-screens-grid img {
@@ -521,7 +522,7 @@ html {
 }
 
 .future-improvements-inner-section {
-    padding-top: 0.5rem;
+    padding-top: 1.2rem;
 }
 
 .future-improvements-inner-section + .future-improvements-inner-section {
