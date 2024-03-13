@@ -263,6 +263,14 @@ html {
     .study-navigation-wrapper {
         display: none;
     }
+
+    .ux-study-header {
+        position: sticky;
+        top: var(--header-height-full);
+        z-index: 4;
+        background: var(--clr-bkgd);
+    }
+
 }
 
 .study-navigation-container {
@@ -301,11 +309,13 @@ html {
 }
 
 .study-navigation-container a.active {
-    padding-left: 1.2rem
+    padding-left: 1.0rem;
+    color: var(--clr-main);
 }
 
 .study-navigation-container a:hover {
-    padding-left: 1.2rem;
+    padding-left: 1.0rem;
+    color: var(--clr-main);
 }
 
 .class-study-main-container {
