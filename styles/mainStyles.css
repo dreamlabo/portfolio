@@ -57,7 +57,6 @@ body {
 
 .section-container {
     width: 100%;
-    /* max-width: var(--max-screen-width); */
     margin: 0 auto;
 }
 
@@ -182,30 +181,20 @@ body {
 }
 
 .hero--btm-text {
-    /* position: absolute;
-    bottom: 100px; */
-
-    /* left: 0; */
-    width: 100%;
-
- 
-
+    /* width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; */
     width: 100%;
-  
     color: var(--clr-third);
     font-family: var(--font-family-heading);
     font-size: clamp(12px, 2.5vw + 3px, 20px);
-    /* opacity: .3; */
-   
 }
 
 .hero--btm-text span:nth-child(1),
 .hero--btm-text span:nth-child(2),
 .hero--btm-text span:nth-child(3) {
     position: absolute;
-    bottom: 30px;
+    bottom: 20px;
     opacity: 0;
 }
 
@@ -223,12 +212,6 @@ body {
 .hero--btm-text span:nth-child(3) {
     right: 100px;
     animation: move-text-three 1200ms ease-out 3s forwards 
-}
-
-@keyframes move-text {
-    to {
-        opacity: 1;
-    }  
 }
 
 @keyframes move-text-one  {
@@ -422,7 +405,7 @@ body {
     }
 
     .hero--btm-text {
-        width: 60%;
+        /* width: 60%; */
     }
 }
 
@@ -431,8 +414,8 @@ body {
         width: calc(100% - var(--page-margin-four));
     }
     .hero-section-container {
-        min-height: calc(100vh - var(--header-height-two));
-        min-height: calc(100svh - var(--header-height-two));
+        min-height: max(400px, calc(100vh - var(--header-height-two)));
+        min-height: max(400px, calc(100svh - var(--header-height-two)));
     }
 
     .hero-left {
@@ -440,15 +423,23 @@ body {
         /* align-self: start; */
     }
 
-    .hero--btm-text {
+    /* .hero--btm-text {
         width: 100%;
-    }
+    } */
 }
 
 @media screen and (max-width: 500px) {
     .hero-section-container {
-        min-height: calc(100vh - var(--header-height-three));
-        min-height: calc(100svh - var(--header-height-three));
+        min-height: max(400px, calc(100vh - var(--header-height-three)));
+        min-height: max(400px, calc(100svh - var(--header-height-three)));
+    }
+
+    .hero--btm-text span:nth-child(1),
+    .hero--btm-text span:nth-child(2),
+    .hero--btm-text span:nth-child(3) {
+        position: absolute;
+        bottom: 10px;
+        opacity: 0;
     }
 }
 
