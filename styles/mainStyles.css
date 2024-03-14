@@ -64,13 +64,9 @@ body {
 .hero-section-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-
     column-gap: 0;
-    min-height: calc(100vh - (var(--header-height-full) * 2));
-    /* min-height: 600px; */
-    /* align-items: center; */
-    
-    /* padding-bottom: 6rem; */
+    min-height: max(400px, calc(100vh - var(--header-height-full)));
+    min-height: max(400px, calc(100svh - var(--header-height-full)));
 }
 
 /* Hero Section */
@@ -78,7 +74,6 @@ body {
     width: calc(100% - var(--page-margin-full));
     max-width: var(--max-screen-width);
     margin: 0 auto;
-    /* border: 1px solid red; */
 }
 
 @media screen and  (max-width: 960px) {
@@ -88,11 +83,10 @@ body {
 }
 
 .left--hero {
-    /* padding: 2rem 0; */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+    position: relative;
 }
 
 .hero-left {
@@ -188,17 +182,74 @@ body {
 }
 
 .hero--btm-text {
-    width: 50%;
-    padding-top: 1rem;
+    /* position: absolute;
+    bottom: 100px; */
+
+    /* left: 0; */
+    width: 100%;
+
+ 
+
     display: flex;
     justify-content: space-between;
-    opacity: .4;
+    width: 100%;
   
-    font-family: var(--font-family-heading);
     color: var(--clr-third);
-    font-size: 20px;
+    font-family: var(--font-family-heading);
     font-size: clamp(12px, 2.5vw + 3px, 20px);
-    /* padding-bottom: 2rem */
+    /* opacity: .3; */
+   
+}
+
+.hero--btm-text span:nth-child(1),
+.hero--btm-text span:nth-child(2),
+.hero--btm-text span:nth-child(3) {
+    position: absolute;
+    bottom: 30px;
+    opacity: 0;
+}
+
+.hero--btm-text span:nth-child(1) {
+    left: -100px;
+    animation: move-text-one 1200ms ease-out 1s forwards 
+}
+
+.hero--btm-text span:nth-child(2) {
+    left: calc(50% - 100px);
+    transform: translateX(-30%);
+    animation: move-text-two 1200ms ease-out 2s forwards 
+}
+
+.hero--btm-text span:nth-child(3) {
+    right: 100px;
+    animation: move-text-three 1200ms ease-out 3s forwards 
+}
+
+@keyframes move-text {
+    to {
+        opacity: 1;
+    }  
+}
+
+@keyframes move-text-one  {
+    to {
+        left: 0;
+        opacity: 1;
+    }  
+}
+
+@keyframes move-text-two  {
+    to {
+        left: calc(50% - 0px);
+        opacity: 1;
+    }  
+}
+
+@keyframes move-text-three  {
+    to {
+        right: 0px;
+        opacity: 1;
+    }  
 }
 
 .span--clr-main {
@@ -380,7 +431,8 @@ body {
         width: calc(100% - var(--page-margin-four));
     }
     .hero-section-container {
-        min-height: calc(100vh - (var(--header-height-two) * 2));
+        min-height: calc(100vh - var(--header-height-two));
+        min-height: calc(100svh - var(--header-height-two));
     }
 
     .hero-left {
@@ -395,7 +447,8 @@ body {
 
 @media screen and (max-width: 500px) {
     .hero-section-container {
-        min-height: calc(100vh - (var(--header-height-three) * 2));
+        min-height: calc(100vh - var(--header-height-three));
+        min-height: calc(100svh - var(--header-height-three));
     }
 }
 
