@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
 }
-/* comment */
 
 :root {
     --font-family-heading: "Lato", sans-serif;
@@ -24,7 +23,7 @@
     --max-screen-width: 1800px;
 
     --header-height-full: 66px;
-    --header-height-two: 57px; /* For page widths < 600px */
+    --header-height-two: 57px;      /* For page widths < 600px */
     --header-height-three: 52px;    /* For page widths < 500px */
 
     --page-margin-full: 8rem;
@@ -106,26 +105,8 @@ body {
     position: relative;
 }
 
-/* .hidden {
-    overflow: hidden;
-    height: clamp(2rem, 7vw + 7px, 72px);
-    position: relative;
-
-} */
-
-/* .hidden-lower {
-    overflow: hidden;
-    height: 28px;
-    position: relative;
-
-} */
-
 .name-text-container h1 {
     font-size: 64px;
-    /* position: absolute;
-    top: 100%;
-    left: 0;
-    animation: move-up 750ms ease-in-out forwards; */
 }
 
 @keyframes move-up {
@@ -168,26 +149,19 @@ body {
     
 }
 
-
 .hero--sub-header {
     margin-top: 2rem;
     max-width: 24ch;
     color: var(--clr-second);
-    /* font-size: 32px; */
     font-size: clamp(1rem, 4vw + 5px, 2rem);
     line-height: 1.4;
-    /* text-transform: uppercase; */
-
 }
 
 .hero--btm-text {
-    /* width: 100%;
-    display: flex;
-    justify-content: space-between; */
     width: 100%;
     color: var(--clr-third);
     font-family: var(--font-family-heading);
-    font-size: clamp(12px, 2.5vw + 3px, 20px);
+    font-size: clamp(16px, 2.5vw + 3px, 20px);
 }
 
 .hero--btm-text span:nth-child(1),
@@ -347,18 +321,15 @@ body {
     }
 
     .hero-section-container {
-        /* height: 50vh; */
         grid-template-columns: 1fr;
         row-gap: 2rem;
     }
     
     .hero-left {
-        /* height: 50%; */
         display: grid;
         grid-template-columns: 1fr;
         row-gap: 2rem;
         align-items: center;
-        
     }
 
     .hero-right {
@@ -366,15 +337,12 @@ body {
     }
 
     .name-wrapper {
-        /* place-self: end end; */
         width: 100%;
         max-width: 100%;
     }
  
-
     .build-container {
         padding-top: 0;
-       
         padding-bottom: 0rem;
         place-self: start;
         margin-bottom: 12rem;
@@ -413,6 +381,7 @@ body {
     .page-wrapper {
         width: calc(100% - var(--page-margin-four));
     }
+
     .hero-section-container {
         min-height: max(400px, calc(100vh - var(--header-height-two)));
         min-height: max(400px, calc(100svh - var(--header-height-two)));
@@ -546,6 +515,4 @@ body {
 
 .footer-email:hover {
     text-decoration: underline;
-    
 }
-
