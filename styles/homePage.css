@@ -2,6 +2,15 @@
     margin-top: 6rem;
 }
 
+/* #innovate {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#innovate.opacity {
+    opacity: 1;
+} */
+
 .section-padding {
     padding: 8rem 0 8rem 0;
 }
@@ -146,7 +155,12 @@
     font-family: var(--font-family-sub-text);
     color: var(--clr-second);
     font-size: 1.25rem;
-    opacity: 0.8;
+    opacity: 0;
+    transition: opacity 2.6s;
+}
+
+.about-text.add-opacity {
+    opacity: 0.8
 }
 
 .about-image {
@@ -210,7 +224,7 @@
     }
 
     .about-section-wrapper {
-        margin-top: 1.5rem;
+        margin-top: 4rem;
     }
 
     .heading-grid--full {
