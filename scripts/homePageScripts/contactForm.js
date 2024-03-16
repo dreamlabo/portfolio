@@ -9,7 +9,9 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 
 
-contactForm.addEventListener('submit', handleContactFormSubmit)
+contactForm.addEventListener('submit', handleContactFormSubmit);
+contactForm.reset();
+contactMessage.innerText = "";
 
 function handleContactFormSubmit(e) {
     e.preventDefault();

@@ -11,6 +11,32 @@ html {
     scroll-padding-top: var(--scroll-padding, 70px);
 }
 
+.cars-website-notice {
+    margin-top: 5rem;
+}
+
+.cars-website-notice p {
+
+    color: var(--clr-second);
+}
+
+.cars-website-notice a {
+    display: block;
+    width: fit-content;
+    margin: 0.6rem 0;
+    color: var(--clr-second)
+}
+.cars-website-notice a:hover,
+.cars-website-notice i:hover {
+    color: var(--clr-main)
+
+}
+
+.cars-website-notice i {
+    margin:  0 0.6rem;
+    color: var(--clr-second)
+}
+
 .case-study-main-header {
     max-width: 45ch;
     margin-bottom: .3rem;
@@ -211,7 +237,7 @@ html {
 }
 
 .case-study-grid--actual {
-    margin-top: 5rem;
+    margin-top: 3rem;
     display: grid;
     grid-template-columns: 1fr 275px;
     gap: 6rem
